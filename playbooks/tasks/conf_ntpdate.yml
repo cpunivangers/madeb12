@@ -1,0 +1,12 @@
+---
+
+- name: Paquets installés
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: Configuration ntpdate si non ntp
+  replace:
+    path: /etc/default/ntpsec-ntpdate
+    regexp: 'NTPDATE_USE_NTP_CONF=yes'
+    replace: 'NTPDATE_USE_NTP_CONF=no'
+  when: "'ntp' not in ansible_facts.packages"
