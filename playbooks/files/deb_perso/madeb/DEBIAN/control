@@ -1,0 +1,9 @@
+Package: madeb
+Version: 250115.1417
+Section: base
+Priority: optional
+Installed-Size: 384
+Architecture: all
+Depends: bash
+Maintainer: Christian Pottier <christian.pottier@univ-angers.fr>
+Description: Ma Debian
